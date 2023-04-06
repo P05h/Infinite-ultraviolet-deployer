@@ -1,30 +1,4 @@
-# ultraviolet-scripts
-Core Ultraviolet scripts
-
-# Configuration
-Configure Ultraviolet for both client-hooking & service worker in `uv.config.js`
-```javascript
-self.__uv$config = {
-    bare: '/bare/',
-    prefix: '/service/',
-    encodeUrl: Ultraviolet.codec.xor.encode,
-    decodeUrl: Ultraviolet.codec.xor.decode,
-    handler: '/uv.handler.js',
-    bundle: '/uv.bundle.js',
-    config: '/uv.config.js',
-};
-```
-
-
-# Example Usage
-```javascript
-importScripts('/PATHTOSCRIPTS/uv.sw.js');
-
-const sw = new UVServiceWorker();
-
-self.addEventListener('fetch', event =>
-    event.respondWith(
-        sw.fetch(event)
-    )
-);
+[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/P05h/Infinite-ultraviolet-deployer)
+[![Deploy to Netlify](https://binbashbanana.github.io/deploy-buttons/buttons/remade/netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/P05h/Infinite-ultraviolet-deployer)
+[![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/P05h/Infinite-ultraviolet-deployer)
 ```
